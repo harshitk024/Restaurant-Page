@@ -1,0 +1,9 @@
+body {
+    background-color: red;
+}
+
+#nav {
+    
+    display: flex;
+    gap : 10px;
+}

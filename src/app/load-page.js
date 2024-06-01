@@ -1,22 +1,16 @@
-export const load = function(...elements){
+export const loadHome = function(name,des){
 
-    const header = document.createElement("header")
+    const container = document.querySelector("#container")
 
-    const nav = document.createElement("nav")
-    nav.setAttribute("id","nav")
+    const title = document.createElement("div")
+    title.setAttribute("id","title")
+
+    const description = document.createElement("div")
+    description.setAttribute("id","description")
     
-    const container = document.createElement("div")
-    container.setAttribute("id","container")
+    title.textContent = name
+    description.textContent = des
 
-    elements.forEach((ele)=>{
-        let button = document.createElement("button")
-        button.setAttribute("id",ele)
-        button.textContent = ele.charAt(0).toUpperCase() + ele.slice(1)
-        nav.appendChild(button);
-    })
-
-    header.appendChild(nav)
-    document.body.appendChild(header)
-    document.body.appendChild(container)
-
+    container.append(title)
+    container.append(description)
 }
